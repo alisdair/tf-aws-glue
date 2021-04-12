@@ -79,7 +79,7 @@ resource "aws_security_group" "test" {
 }
 
 resource "aws_subnet" "test" {
-  count = 2
+  count = 5
 
   availability_zone = data.aws_availability_zones.available.names[count.index]
   cidr_block        = "10.0.${count.index}.0/24"
